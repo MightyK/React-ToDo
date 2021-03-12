@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import ToDoItem from './ToDoItem';
+import InputArea from './InputArea';
+
 const App = () => {
 
     const [inputText, setInputText] = useState('');
@@ -39,18 +41,11 @@ const App = () => {
             <div className='heading'>
                 <h1>To-Do List</h1>
             </div>
-            <div className='form'>
-                <input 
-                    type='text' 
-                    onChange={handleChange}
-                    value={inputText} 
-                />
-                <button
-                    onClick={addItem}
-                >
-                    <span>Add</span>
-                </button>
-            </div>
+            <InputArea 
+                onAdd={addItem}
+                onChange={handleChange}
+                text={inputText}
+            />
             <div>
                 <ul>
                     {items.map( (todoItem, index) => {
