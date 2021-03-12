@@ -8,13 +8,9 @@ const ToDoItem = (props) => {
     }
 
     return(
-        <div>
-            <li 
-                onClick={handleClick} 
-            >
+            <li style={props.toDelete} onClick={handleClick}>
                 {props.text}
             </li>
-        </div>
     );
 }
 
