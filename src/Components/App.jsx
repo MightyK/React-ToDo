@@ -22,13 +22,16 @@ const App = () => {
     }
 
     const deleteItem = (id) => {
-        setItems((prevItems) => {
-            return prevItems.filter(
-                (item, index) => {
-                    return index !== id;
-                }
-            );
-        });
+        setTimeout(() => {
+            setItems((prevItems) => {
+                return prevItems.filter(
+                    (item, index) => {
+                        return index !== id;
+                    }
+                );
+            });
+            
+        }, 300);
     }
 
     return (
