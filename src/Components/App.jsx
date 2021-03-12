@@ -42,8 +42,8 @@ const App = () => {
                 <h1>To-Do List</h1>
             </div>
             <InputArea 
-                add={addItem}
-                change={handleChange}
+                onAdd={addItem}
+                onChange={handleChange}
                 text={inputText}
             />
             <div>

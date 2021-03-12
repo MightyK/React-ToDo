@@ -5,11 +5,11 @@ const InputArea = (props) => {
         <div className='form'>
             <input 
                 type='text' 
-                onChange={props.change}
+                onChange={props.onChange}
                 value={props.text} 
             />
             <button
-                onClick={props.add}
+                onClick={props.onAdd}
             >
                 <span>Add</span>
             </button>
